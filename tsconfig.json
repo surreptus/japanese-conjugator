@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "node16",
+    "target": "es2020",
+    "strict": true,
     "declaration": true,
+    "sourceMap": true,
     "outDir": "./dist"
   },
+  "exclude": ["src/**/*.test.ts"],
   "include": ["src/**/*"]
 }
