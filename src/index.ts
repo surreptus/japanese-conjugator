@@ -1,8 +1,4 @@
-export enum Inflection {
-  Past = "Past",
-  Present = "Present",
-}
+import { inflect } from "./inflect";
+import * as shift from "./shift";
 
-export function hello() {
-  return "Hello, World!";
-}
+export { inflect, shift };
