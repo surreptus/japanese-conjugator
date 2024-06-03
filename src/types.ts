@@ -1,3 +1,7 @@
+export interface ExistenceMap {
+  [key: string]: boolean;
+}
+
 export enum EndingVowel {
   A,
   I,

@@ -1,11 +1,11 @@
 import { Group, Inflection, Verb } from "./types";
 import { toE, toI } from "./shift";
-import { guess } from "./group";
 import {
   getCombiningStem,
   getPoliteStem,
   splitOnLast,
   splitOnSecondLast,
+  guessGroup,
 } from "./helpers";
 import { SURU } from "./constants";
 
@@ -113,7 +113,7 @@ export function inflect(
   inflection: Inflection,
   group?: Group
 ): string {
-  let resolvedGroup = group ?? guess(verb);
+  let resolvedGroup = group ?? guessGroup(verb);
 
   switch (inflection) {
     // 食べる

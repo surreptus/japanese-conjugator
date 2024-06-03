@@ -1,15 +1,70 @@
 import { SURU } from "./constants";
 import { toI } from "./shift";
-import { Group } from "./types";
+import { Group, ExistenceMap } from "./types";
 
+import godanIruEru from "./data/godan-iru-eru.json";
+
+/**
+ *
+ * @param word
+ * @param length
+ * @returns
+ */
 export function splitOnIndex(word: string, length: number): string[] {
   return [word.slice(0, length), word.slice(length)];
 }
 
+/**
+ *
+ * @param word
+ * @returns
+ */
 export const splitOnLast = (word: string): string[] => splitOnIndex(word, -1);
 
+/**
+ *
+ * @param word
+ * @returns
+ */
 export const splitOnSecondLast = (word: string): string[] =>
   splitOnIndex(word, -2);
+
+/**
+ * checks the maps of irregular verbs to see if it exists within it.
+ *
+ * @param verb
+ * @returns
+ */
+export function isIrregular(verb: string): boolean {
+  const last = verb.slice(-2);
+
+  return last === "する" || last === "くる" || last === "来る";
+}
+
+/**
+ *
+ * @param verb
+ * @returns
+ */
+export function isIchidan(verb: string): boolean {
+  const [_, ending] = splitOnLast(verb);
+
+  if (ending !== "る") return false;
+
+  return (godanIruEru as ExistenceMap)[verb] === undefined;
+}
+
+/**
+ *
+ * @param verb
+ * @returns
+ */
+export function guessGroup(verb: string): Group {
+  if (isIrregular(verb)) return Group.Irregular;
+  if (isIchidan(verb)) return Group.Ichidan;
+
+  return Group.Godan;
+}
 
 /**
  * returns the stem form that goes with the te and simple past forms.
