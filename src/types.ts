@@ -28,14 +28,14 @@ export interface Verb {
 }
 
 export enum Inflection {
-  NonPast = "non-past",
-  NonPastPolite = "non-past-polite",
-  Past = "past",
-  PastPolite = "past-polite",
-  Te = "te",
-  Potential = "potential",
-  Passive = "passive",
-  Causative = "causative",
-  CausativePassive = "causative-passive",
-  Imperative = "imperative",
+  NonPast = "NonPast",
+  NonPastPolite = "NonPastPolite",
+  Past = "Past",
+  PastPolite = "PastPolite",
+  Te = "Te",
+  Potential = "Potential",
+  Passive = "Passive",
+  Causative = "Causative",
+  CausativePassive = "CaustivePassive",
+  Imperative = "Imperative",
 }

@@ -1,5 +1,5 @@
 {
-  "name": "japanese-conjugator",
+  "name": "@surreptus/japanese-conjugator",
   "version": "0.1.0",
   "description": "A small library to inflect Japanese verbs and adjectives.",
   "keywords": [
@@ -16,7 +16,10 @@
     "dist"
   ],
   "homepage": "https://github.com/surreptus/japanese-conjugator",
-  "repository": "git@github.com:surreptus/japanese-conjugator.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/surreptus/japanese-conjugator.git"
+  },
   "author": "surreptus <47543507+surreptus@users.noreply.github.com>",
   "license": "GPL-3.0-only",
   "private": false,
