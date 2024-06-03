@@ -11,7 +11,7 @@ import { getCombiningStem, splitOnLast } from "../helpers";
 
 export function getPastForm(verb: string, group: Group) {
   const stem = getCombiningStem(verb, group);
-  let [, ending] = splitOnLast(verb);
+  const [, ending] = splitOnLast(verb);
 
   switch (group) {
     case Group.Godan:
@@ -30,6 +30,7 @@ export function getPastForm(verb: string, group: Group) {
         case "す":
           return `${stem}た`;
       }
+      break;
     case Group.Ichidan:
     case Group.Irregular:
       return `${stem}た`;

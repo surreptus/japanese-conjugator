@@ -1,4 +1,4 @@
-import { Group, Inflection, Verb } from "./types";
+import { Group, Inflection } from "./types";
 import { getPoliteStem, guessGroup } from "./helpers";
 import { getPotentialForm } from "./inflections/potential";
 import { getTeForm } from "./inflections/te";
@@ -17,7 +17,7 @@ export function inflect(
   inflection: Inflection,
   group?: Group
 ): string {
-  let resolvedGroup = group ?? guessGroup(verb);
+  const resolvedGroup = group ?? guessGroup(verb);
 
   switch (inflection) {
     // 食べる

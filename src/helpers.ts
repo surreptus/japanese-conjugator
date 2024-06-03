@@ -47,7 +47,7 @@ export function isIrregular(verb: string): boolean {
  * @returns
  */
 export function isIchidan(verb: string): boolean {
-  const [_, ending] = splitOnLast(verb);
+  const [, ending] = splitOnLast(verb);
 
   if (ending !== "る") return false;
 
@@ -99,6 +99,7 @@ export function getCombiningStem(verb: string, group: Group): string {
         case "す":
           return `${start}し`;
       }
+      break;
     // for irregular verbs, we just have two options, suru verb in which we need to preserve
     // the preceding noun, or just 来る
     case Group.Irregular:

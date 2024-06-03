@@ -1,6 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { inflect } from "../../inflect";
-import { Group, Inflection } from "../../types";
+import { Group } from "../../types";
 import { getTeForm } from "../te";
 
 describe("getTeForm", () => {
