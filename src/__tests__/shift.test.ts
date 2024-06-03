@@ -1,4 +1,4 @@
-import { toA, toE, toI } from "../shift";
+import { toA, toE, toI, toO } from "../shift";
 import { describe, test, expect } from "@jest/globals";
 
 describe("toI", () => {
@@ -70,5 +70,29 @@ describe("toE", () => {
 
   test("it should throw on a bogus character", () => {
     expect(() => toE("d")).toThrow("provided an unknown character!");
+  });
+});
+
+describe("toO", () => {
+  test("it should return the expected O vowel", () => {
+    const cases = [
+      ["う", "お"],
+      ["く", "こ"],
+      ["す", "そ"],
+      ["つ", "と"],
+      ["ぬ", "の"],
+      ["ぶ", "ぼ"],
+      ["む", "も"],
+      ["る", "ろ"],
+      ["ぐ", "ご"],
+    ];
+
+    cases.forEach(([input, expected]) => {
+      expect(toO(input)).toBe(expected);
+    });
+  });
+
+  test("it should throw on a bogus character", () => {
+    expect(() => toO("d")).toThrow("provided an unknown character!");
   });
 });

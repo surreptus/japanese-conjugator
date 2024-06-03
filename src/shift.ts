@@ -84,3 +84,34 @@ export function toE(character: string): string {
       throw new Error("provided an unknown character!");
   }
 }
+
+/**
+ * returns the 'o' syllable version of a character
+ *
+ * @param character string
+ * @returns
+ */
+export function toO(character: string): string {
+  switch (character) {
+    case `う`:
+      return `お`;
+    case `く`:
+      return `こ`;
+    case `す`:
+      return `そ`;
+    case `つ`:
+      return `と`;
+    case `ぬ`:
+      return `の`;
+    case `ぶ`:
+      return `ぼ`;
+    case `む`:
+      return `も`;
+    case `る`:
+      return `ろ`;
+    case `ぐ`:
+      return `ご`;
+    default:
+      throw new Error("provided an unknown character!");
+  }
+}
