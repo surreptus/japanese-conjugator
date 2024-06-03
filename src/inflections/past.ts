@@ -29,8 +29,11 @@ export function getPastForm(verb: string, group: Group) {
           return `${stem}た`;
         case "す":
           return `${stem}た`;
+        default:
+          throw new Error(
+            `could not return past form for unknown character ${ending}`
+          );
       }
-      break;
     case Group.Ichidan:
     case Group.Irregular:
       return `${stem}た`;

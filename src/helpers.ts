@@ -98,8 +98,11 @@ export function getCombiningStem(verb: string, group: Group): string {
           return `${start}っ`;
         case "す":
           return `${start}し`;
+        default:
+          throw new Error(
+            `could not return combining form for unknown character group: ${ending}`
+          );
       }
-      break;
     // for irregular verbs, we just have two options, suru verb in which we need to preserve
     // the preceding noun, or just 来る
     case Group.Irregular:

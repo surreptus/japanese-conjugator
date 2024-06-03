@@ -27,8 +27,11 @@ export function getTeForm(verb: string, group: Group) {
         case "る":
         case "す":
           return `${stem}て`;
+        default:
+          throw new Error(
+            "could not return past form for unknown character group"
+          );
       }
-      break;
     case Group.Ichidan:
     case Group.Irregular:
       return `${stem}て`;
