@@ -17,4 +17,4 @@ inflect("語る", Inflection.Past, Group.Godan); // 語った
 
 I started this project as a way to learn the way in which verbs and adjectives change in each form, and get more comfortable using it in my own speech and writing.
 
-Want to suggest an improvement or report a bug? Please use the Github issues to start a discussion.
+Want to suggest an improvement or report a bug? Please [create a Github issue](https://github.com/surreptus/japanese-conjugator/issues/new) to raise it.
