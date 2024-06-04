@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, it, test } from "@jest/globals";
 import { getPastForm } from "../past";
 import { Group } from "../../types";
 

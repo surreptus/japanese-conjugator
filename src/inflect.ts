@@ -3,6 +3,7 @@ import { getPoliteStem, guessGroup } from "./helpers";
 import { getPotentialForm } from "./inflections/potential";
 import { getTeForm } from "./inflections/te";
 import { getPastForm } from "./inflections/past";
+import { getPassiveForm } from "./inflections/passive";
 
 /**
  * inflects the given Verb entry with the provided inflection
@@ -38,6 +39,9 @@ export function inflect(
     // 食べれる
     case Inflection.Potential:
       return getPotentialForm(verb, resolvedGroup);
+    // 食べられる
+    case Inflection.Passive:
+      return getPassiveForm(verb, resolvedGroup);
     default:
       throw new Error("invalid inflection provided, or not yet implemented!");
   }

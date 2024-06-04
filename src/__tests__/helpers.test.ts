@@ -54,6 +54,12 @@ describe("getCombiningStem", () => {
     });
   });
 
+  test("should throw for an unknown godan ending", () => {
+    expect(() => getCombiningStem("ず", Group.Godan)).toThrow(
+      "could not return combining form for unknown character group: ず"
+    );
+  });
+
   test("it should return the する form", () => {
     expect(getCombiningStem("勉強する", Group.Irregular)).toBe("勉強し");
   });

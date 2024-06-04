@@ -39,6 +39,10 @@ describe("inflect", () => {
       expect(inflect(verb, Inflection.PastPolite)).toBe("飲みました");
     });
 
+    test("it should return the passive form", () => {
+      expect(inflect(verb, Inflection.Passive)).toBe("飲まれる");
+    });
+
     test("it should return the te form", () => {
       const cases = [
         ["飲む", "飲んで"],
