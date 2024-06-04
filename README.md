@@ -1,5 +1,7 @@
 ## 🔰 Japanese Conjugator
 
+![build](https://github.com/surreptus/japanese-conjugator/actions/workflows/build.yml/badge.svg)
+
 A small library to inflect Japanese verbs and adjectives. It aims to allow you provide a verb or adjective such as `食べる` and an inflecion `PolitePast` and for it to return `食べました`.
 
 ### Usage
