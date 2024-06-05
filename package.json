@@ -1,6 +1,6 @@
 {
   "name": "@surreptus/japanese-conjugator",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A small library to inflect Japanese verbs and adjectives.",
   "keywords": [
     "japanese",
