@@ -11,6 +11,8 @@ A small library to inflect Japanese verbs and adjectives. It aims to allow you p
 Takes a given word and inflects it using the Inflection provided. You can optionally provide a group to use if you want to overide / ensure the right conjugation is used, otherwise it will guess based on the ending and lookup tables.
 
 ```ts
+import { inflect, Inflection, Group } from '@surreptus/japanese-conjugator'
+
 inflect("調べる", Inflection.Te); // 調べて
 inflect("語る", Inflection.Past, Group.Godan); // 語った
 ```
