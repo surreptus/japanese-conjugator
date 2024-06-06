@@ -4,6 +4,7 @@ import { getPotentialForm } from "./inflections/potential";
 import { getTeForm } from "./inflections/te";
 import { getPastForm } from "./inflections/past";
 import { getPassiveForm } from "./inflections/passive";
+import { getCausativeForm } from "./inflections/causative";
 
 /**
  * inflects the given Verb entry with the provided inflection
@@ -42,6 +43,8 @@ export function inflect(
     // 食べられる
     case Inflection.Passive:
       return getPassiveForm(verb, resolvedGroup);
+    case Inflection.Causative:
+      return getCausativeForm(verb, resolvedGroup);
     default:
       throw new Error("invalid inflection provided, or not yet implemented!");
   }
