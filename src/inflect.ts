@@ -37,12 +37,16 @@ export function inflect(
     // 食べて
     case Inflection.Te:
       return getTeForm(verb, resolvedGroup);
+    // 食べている
+    case Inflection.Continuous:
+      return `${getTeForm(verb, resolvedGroup)}いる`;
     // 食べれる
     case Inflection.Potential:
       return getPotentialForm(verb, resolvedGroup);
     // 食べられる
     case Inflection.Passive:
       return getPassiveForm(verb, resolvedGroup);
+    // 食べさせる
     case Inflection.Causative:
       return getCausativeForm(verb, resolvedGroup);
     default:

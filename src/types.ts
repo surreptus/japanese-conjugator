@@ -33,6 +33,7 @@ export enum Inflection {
   Past = "Past",
   PastPolite = "PastPolite",
   Te = "Te",
+  Continuous = "Continuous",
   Potential = "Potential",
   Passive = "Passive",
   Causative = "Causative",
